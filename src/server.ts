@@ -19,7 +19,7 @@ connectDB();
 app.use(cors({ origin: true, credentials: true }));
 app.use(bodyParser.json());
 
-app.use('/api/', AuthRouter);
+app.use('/api/auth', AuthRouter);
 app.use('/api/admin', adminRouter);
 
 const PORT = process.env.PORT || 8000;

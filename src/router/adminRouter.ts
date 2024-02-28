@@ -1,7 +1,9 @@
-import { Router } from "express";
-import { upload } from "../controller/adminController";
-const adminRouter = Router();
+import express from "express";
+import { addChannel, upload } from "../controller/adminController";
 
-adminRouter.post("/upload", upload)
+const adminRouter = express.Router();
 
-export default adminRouter
+adminRouter.post("/upload", upload);
+adminRouter.post("/addChannel", addChannel);
+
+export default adminRouter;
